@@ -1,0 +1,96 @@
+
+.calender-body{
+	background: url(images/img1.jpg) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   margin: 0px;
+}
+
+
+.align1{
+  padding-top: 150px;
+  
+}
+
+.align4{
+  padding-top: 300px;
+  
+}
+
+.align3{
+  padding-top: 250px;
+}
+
+.calender-template{
+    background: white;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 400px;
+
+}
+
+.calender-reminder{
+  background: white;
+}
+
+.template-text{
+  background: #CE6B87;
+  color:white;
+  height: 60px;
+  text-align: center;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.align2{
+  padding-top: 20px;
+}
+
+.table{
+  max-width:100%;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    text-align: center;
+}
+
+th{
+  text-align: center;
+}
+
+.checkboxes{
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.datetimetext{
+  text-align:center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button{
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  height: 100%;
+}
+
+
+
+

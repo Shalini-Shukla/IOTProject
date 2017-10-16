@@ -1,0 +1,116 @@
+{% load static %}
+<html>
+	<head>
+		<title> Calender </title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/calender.css' %}" />
+	</head>
+	<body class="calender-body">
+	<div class="container">	
+	  <div class="row"> 
+		  <div class="align3 col-sm-3">
+		     <div class="calender-reminder">
+			    <div class="template-text">
+			       <div class="align2">
+			    	  Reminders
+			    	</div>
+			    </div>
+			    <div class="checkboxes">
+					  <input type="checkbox"> Next meeting in 5 hours<br><br>
+					  <input type="checkbox"> Pick up dry cleaning<br><br>
+					  <input type="checkbox"> Next meeting in 10 hours<br><br>
+			    </div>
+			  </div>
+		  </div>
+
+		  <div class="align1 col-sm-6">
+			<div class="calender-template">
+			    <div class="template-text">
+			       <div class="align2">
+			    	  November 2017
+			    	</div>
+			    </div>
+
+			    <div style="height: 340px;">
+					<table class="table" style="height: 340px;">
+						<tr>
+							<th style="text-align: center;"> Sun </th>
+							<th style="text-align: center;"> Mon </th>
+							<th style="text-align: center;"> Tue </th>
+							<th style="text-align: center;"> Wed </th>
+							<th style="text-align: center;"> Thu </th>
+							<th style="text-align: center;"> Fri </th>
+							<th style="text-align: center;"> Sat </th>
+						</tr>
+						<tr>
+							<td>  </td>
+							<td>  </td>
+							<td>  </td>
+							<td> <button class="button"> 1 </button>  </td>
+							<td> <button class="button"> 2 </button> </td>
+							<td> <button class="button"> 3 </button> </td>
+							<td> <button class="button"> 4 </button> </td>
+						</tr>
+						<tr>
+							<td> <button class="button"> 5 </button> </td>
+							<td> <button class="button"> 6 </button> </td>
+							<td> <button class="button"> 7 </button> </td>
+							<td> <button class="button"> 8 </button> </td>
+							<td> <button class="button"> 9 </button> </td>
+							<td> <button class="button"> 10 </button> </td>
+							<td> <button class="button"> 11 </button> </td>
+						</tr>
+						<tr>
+							<td> <button class="button"> 12 </button> </td>
+							<td> <button class="button"> 13 </button> </td>
+							<td> <button class="button"> 14 </button> </td>
+							<td> <button class="button"> 15 </button> </td>
+							<td> <button class="button"> 16 </button> </td>
+							<td> <button class="button"> 17 </button> </td>
+							<td> <button class="button"> 18 </button> </td>
+						</tr>
+						<tr>
+							<td> <button class="button"> 19 </button> </td>
+							<td> <button class="button"> 20 </button> </td>
+							<td> <button class="button"> 21 </button> </td>
+							<td> <button class="button"> 22 </button> </td>
+							<td> <button class="button"> 23 </button> </td>
+							<td> <button class="button"> 24 </button> </td>
+							<td> <button class="button"> 25 </button> </td>
+						</tr>
+						<tr>
+							<td> <button class="button"> 26 </button> </td>
+							<td> <button class="button"> 27 </button> </td>
+							<td> <button class="button"> 28 </button> </td>
+							<td> <button class="button"> 29 </button> </td>
+							<td> <button class="button"> 30 </button> </td>
+							<td>  </td>
+							<td>  </td>
+						</tr>
+					</table>
+			    </div>
+			</div>
+	     </div>
+
+	     <div class="align4 col-sm-3">
+		     <div class="calender-reminder">
+			    <div class="template-text">
+			       <div class="align2">
+			    	  Date and Time
+			    	</div>
+			    </div>
+			    <div class="datetimetext">
+					  <p> {{date}}</p>
+					  <p> {{time}} </p>
+			    </div>
+			  </div>
+		  </div>
+
+  	 </div>
+  	 </div>
+	</body>
+</html>
+<script src="{% static 'js/jquery/jquery-2.2.3.min.js' %}"></script>
+<script src="{% static 'js/calender.js' %}"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
