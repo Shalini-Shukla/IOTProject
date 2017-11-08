@@ -55,7 +55,7 @@
 			  <p>You Have Meeting</p>
 			</div>
 
-			<button class="w3-button w3-block w3-dark-grey">+ Schedule</button>
+			<button class="w3-button w3-block w3-dark-grey schedule-button 0600">+ Schedule</button>
 
 			</div>
 
@@ -71,7 +71,7 @@
 			  <p>You Have Meeting</p>
 			</div>
 
-			<button class="w3-button w3-block w3-dark-grey">+ Schedule</button>
+			<button class="w3-button w3-block w3-dark-grey schedule-button">+ Schedule</button>
 
 			</div>
 
@@ -87,7 +87,7 @@
 			  <p>You Have Meeting</p>
 			</div>
 
-			<button class="w3-button w3-block w3-dark-grey">+ Schedule</button>
+			<button class="w3-button w3-block w3-dark-grey schedule-button">+ Schedule</button>
 
 			</div>
 
@@ -104,14 +104,14 @@
 			  <p>You Have Meeting</p>
 			</div>
 
-			<button class="w3-button w3-block w3-dark-grey">+ Schedule</button>
+			<button class="w3-button w3-block w3-dark-grey schedule-button">+ Schedule</button>
 
 			</div>
 
 			<div class="col-xs-4 w3-card-4">
 
 			<header class="w3-container w3-light-grey">
-			  <h3>1200 hrs- 1400 hrs</h3>
+			  <h3>1400 hrs- 1600 hrs</h3>
 			</header>
 
 			<div class="w3-container">
@@ -120,14 +120,14 @@
 			  <p>You Have Meeting</p>
 			</div>
 
-			<button class="w3-button w3-block w3-dark-grey">+ Schedule</button>
+			<button class="w3-button w3-block w3-dark-grey schedule-button">+ Schedule</button>
 
 			</div>
 
 			<div class="col-xs-4 w3-card-4">
 
 			<header class="w3-container w3-light-grey">
-			  <h3>1200 hrs- 1400 hrs</h3>
+			  <h3>1600 hrs- 1800 hrs</h3>
 			</header>
 
 			<div class="w3-container">
@@ -136,19 +136,110 @@
 			  <p>You Have Meeting</p>
 			</div>
 
-			<button class="w3-button w3-block w3-dark-grey">+ Schedule</button>
+			<button class="w3-button w3-block w3-dark-grey schedule-button">+ Schedule</button>
 
 			</div>
 
+			<div class="col-xs-4 w3-card-4">
+
+			<header class="w3-container w3-light-grey">
+			  <h3>1800 hrs- 2000 hrs</h3>
+			</header>
+
+			<div class="w3-container">
+			  <p></h1></p>
+			  <hr>
+			  <p>You Have Meeting</p>
+			</div>
+
+			<button class="w3-button w3-block w3-dark-grey schedule-button">+ Schedule</button>
+
+			</div>
+			
+			<div class="col-xs-4 w3-card-4">
+
+			<header class="w3-container w3-light-grey">
+			  <h3>2000 hrs- 2200 hrs</h3>
+			</header>
+
+			<div class="w3-container">
+			  <p></h1></p>
+			  <hr>
+			  <p>You Have Meeting</p>
+			</div>
+
+			<button class="w3-button w3-block w3-dark-grey schedule-button">+ Schedule</button>
+
+			</div>
+			
+			<div class="col-xs-4 w3-card-4">
+
+			<header class="w3-container w3-light-grey">
+			  <h3>2200 hrs- 2400 hrs</h3>
+			</header>
+
+			<div class="w3-container">
+			  <p></h1></p>
+			  <hr>
+			  <p>You Have Meeting</p>
+			</div>
+
+			<button class="w3-button w3-block w3-dark-grey schedule-button">+ Schedule</button>
+
+			</div>
 					
-		  	  
 		</div>
 		</div>
+
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Enter the Details</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+				  <div class="form-group">
+				    <label for="nameOfEvent">Name of the event:</label>
+				    <input type="nameOfEvent" class="form-control" id="nameOfEvent">
+				  </div>
+				  <div>
+				  <label for="time">Select Time:</label>
+					  <select class="form-control" id="time">
+					    <option>1000:1200</option>
+					    <option>1200:1400</option>
+					  </select>
+				  </div>
+				  <br>
+				  <div>
+				  <label for="importance">Select Importance:</label>
+					  <select class="form-control" id="importance">
+					    <option>Not Important</option>
+					    <option>Important</option>
+					    <option>Very Important</option>
+					  </select>
+				  </div>
+				  <br>
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+
 	</body>
-	<script src="{% static 'js/jquery/jquery-2.2.3.min.js' %}"></script>
-	<script src="{% static 'js/test.js' %}"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </html>
+<script src="{% static 'js/jquery/jquery-2.2.3.min.js' %}"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="{% static 'js/test.js' %}"></script>
+

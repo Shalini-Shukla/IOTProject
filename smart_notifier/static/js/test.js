@@ -1,3 +1,5 @@
 $(document).ready(function(){
-	// alert('sam')
+	$('.schedule-button').click(function(){
+		$('#myModal').modal('show')	
+	})
 })
