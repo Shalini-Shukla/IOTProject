@@ -6,9 +6,11 @@ from django.shortcuts import redirect
 import datetime
 
 def index(request,date):
-    return render(request,'time_wise/index.html',{'date':date})
+	return render(request,'time_wise/index.html',{'date':date})
 
 def calender(request):
+	content = open('C:\Users\Samrat\Desktop\IOTProject\smart_notifier\static\scraped_data.txt').read()
+	print(content)
 	date = datetime.datetime.now().date();
 	time = datetime.datetime.now().time();
-	return render(request, 'calender/calender.html',{'date':date,'time':time})
+	return render(request, 'calender/calender.html',{'date':date,'time':time , 'content':content})
