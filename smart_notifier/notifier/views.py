@@ -9,7 +9,7 @@ def index(request,date):
 	return render(request,'time_wise/index.html',{'date':date})
 
 def calender(request):
-	content = open('C:\Users\Samrat\Desktop\IOTProject\smart_notifier\static\scraped_data.txt').read()
+	content = open('C:\Users\user\Desktop\IOTProject\smart_notifier\static\scraped_data.txt').read()
 	print(content)
 	date = datetime.datetime.now().date();
 	time = datetime.datetime.now().time();
