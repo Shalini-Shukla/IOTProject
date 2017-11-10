@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	alert('sam')
+	// alert('sam')
 	$('button').click(function(){
 		var date = $(this).text()
 		// alert(date)
