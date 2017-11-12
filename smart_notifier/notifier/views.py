@@ -4,10 +4,14 @@ import json
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import redirect
 import datetime
+import os.path
 
 def index(request,date):
-	content = open('C:\\Users\\Samrat\\Desktop\\IOTProject\\smart_notifier\\static\\Entered_Data\\'+date+'.txt').read()
+	if os.path.isfile('C:\\Users\\Samrat\\Desktop\\IOTProject\\smart_notifier\\static\\Entered_Data\\'+date+'.txt'):
+		content = open('C:\\Users\\Samrat\\Desktop\\IOTProject\\smart_notifier\\static\\Entered_Data\\'+date+'.txt').read()
 	# print(content)
+	else:
+		content=""
 	events = content.split('\n')
 	del(events[len(events)-1])
 	# print(events)
@@ -41,4 +45,5 @@ def writedata(request,date):
 	content = open('C:\\Users\\Samrat\\Desktop\\IOTProject\\smart_notifier\\static\\Entered_Data\\'+date+'.txt',"a+")
 	content.write(final_string+'\n')
 	date= final_string.split(",")[0]
+	print(final_string)
 	return render(request,'time_wise/index.html',{'date':date})
