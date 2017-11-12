@@ -31,6 +31,6 @@ $(document).ready(function(){
 
 	function success(data)
 	{
-		alert(data);
+		 location.reload()
 	}
 })
