@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	var date = document.getElementById("Date-fetch")
-	var final_string = date.innerHTML;
+	
 	$('.schedule-button').click(function(){
 		$('#myModal').modal('show')	
 		time1 = $(this).data('slot-one')
@@ -10,32 +10,23 @@ $(document).ready(function(){
 		$('.time-slot-two').text(time2)
 	});
 
-	$('#nameOfEvent').change(function(){
-		var x = document.getElementById('nameOfEvent');
-		final_string = final_string+"," +x.value+",";
-	});
-
-	$('#time').change(function(){
-		var x = document.getElementById('time');
-		final_string = final_string +x.value+",";
-	});
-
-	$('#importance').change(function(){
-		var x = document.getElementById('importance');
-		final_string = final_string +x.value+",";
-
-	});
-
 	$('#submit_button').click(function(){
-		// window.location.href = final_string.trim() + '/'
-		// alert(final_string.trim());
+		var final_string = date.innerHTML;
+		final_string = final_string+"," +$('#nameOfEvent').val();
+		final_string = final_string+"," +$('#time').val();
+		final_string = final_string+"," +$('#importance').val();
+		// var data = {'data':final_string}
+		url = window.location.href + 'writedata'
+		alert(final_string.trim());
+
+
 		$.ajax({
-			type: "POST",
-			url: window.location.href,
-			data: final_string,
-			success: success,
-			datatype: datatype
+			type: "GET",
+			url: url,
+			data: {'data':final_string},
+			success: success
 		})
+
 	});
 
 	function success(data)
