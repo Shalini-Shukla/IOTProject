@@ -1,1 +1,4 @@
 17,Bengaluru round of ConQuizTador 2017,0800-0900,Important
+17,Event_one,1700-1800,Important
+17,Event_Two,1600-1700,Not_Important
+17,Event_Three,1700-1800,Very_Important
