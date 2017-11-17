@@ -47,3 +47,28 @@ def writedata(request,date):
 	date= final_string.split(",")[0]
 	print(final_string)
 	return render(request,'time_wise/index.html',{'date':date})
+
+def delete(request,date):
+	data = request.GET['data']
+	# print(data)
+	file = open('C:\\Users\\Samrat\\Desktop\\IOTProject\\smart_notifier\\static\\Entered_Data\\'+date+'.txt','r+')
+	dict1 = dict()
+
+	events = []
+
+	for line in file:
+		# print(line)
+		file_list = line.split(',')
+		event_name = file_list[1]
+		# print(event_name)
+		if(event_name != data):
+				events.append(line)
+
+	# print(events)
+	file.seek(0)
+	file.truncate()
+
+	for event in events:
+		file.write(event)
+
+	return render(request,'time_wise/index.html',{'date':date})

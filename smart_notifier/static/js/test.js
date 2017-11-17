@@ -2,6 +2,17 @@ $(document).ready(function(){
 
 	var date = document.getElementById("Date-fetch")
 
+	$('.delete-event').click(function(){
+		var eventName = $(this).data('event')
+		deleteUrl = window.location.href + 'delete'
+		$.ajax({
+			type: "GET",
+			url: deleteUrl,
+			data: {'data':eventName},
+			success: success
+		})
+	});
+
 	$('.schedule-button').click(function(){
 		$('#myModal').modal('show')	
 		time1 = $(this).data('slot-one')
@@ -17,7 +28,7 @@ $(document).ready(function(){
 		final_string = final_string+"," +$('#importance').val();
 		// var data = {'data':final_string}
 		url = window.location.href + 'writedata'
-		alert(url);
+		// alert(url);
 
 
 		$.ajax({
